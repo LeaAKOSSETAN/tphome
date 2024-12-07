@@ -1,0 +1,36 @@
+.tags-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 300px;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+  }
+  
+  .tags-container h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .tags-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tag {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #c2185b;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .tag:hover {
+    background-color: #c2185b;
+    color: white;
+  }

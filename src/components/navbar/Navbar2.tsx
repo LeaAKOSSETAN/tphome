@@ -2,6 +2,7 @@ import React from 'react'
 import image from './image.jpg'
 import logo from './logo.png'
 
+
 export const Navbar2 = () => {
   return (
     

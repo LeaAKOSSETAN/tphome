@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ImageList from './Components/ImageList';
+import Posts from './Components/Posts';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,6 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ImageList/>
+    <Posts/>
   </React.StrictMode>
 );
 

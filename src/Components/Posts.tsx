@@ -1,83 +1,95 @@
-import React from 'react'
-import Img1 from "./post1.jpg"
+import React, { useState } from 'react';
+import { Container, Row, Col, Card, Form } from 'react-bootstrap';
 
-export default function Posts() {
+function RecentPosts() {
+  const [search, setSearch] = useState("");
+
+  const posts = [
+    {
+      id: 1,
+      title: "Consectetuer vehicula ab",
+      category: "In Kitchen, Lifestyle",
+      image: "https://websitedemos.net/blog-02/wp-content/uploads/sites/132/2017/11/pic26-free-img-150x150.jpg",
+    },
+    {
+      id: 2,
+      title: "Taciti hendrerit dis odit incidunt",
+      category: "In Kitchen, Living Room, Reading Room",
+      image: "https://websitedemos.net/blog-02/wp-content/uploads/sites/132/2017/11/hero01-free-img-150x150.jpg",
+    },
+    {
+      id: 3,
+      title: "Sunt doloremque blandit inven",
+      category: "In Living Room",
+      image: "https://websitedemos.net/blog-02/wp-content/uploads/sites/132/2017/11/pic20-free-img-150x150.jpg",
+    },
+    {
+      id: 4,
+      title: "Fugit quaerat voluptate! Irure.",
+      category: "In Living Room",
+      image: "https://websitedemos.net/blog-02/wp-content/uploads/sites/132/2017/11/hero01-free-img-150x150.jpg",
+    },
+    {
+      id: 5,
+      title: "Litora aptent magnam",
+      category: "In Bedroom",
+      image: "https://websitedemos.net/blog-02/wp-content/uploads/sites/132/2017/11/sofa-with-pot-150x150.jpg",
+    },
+    
+  ];
+
+  const filteredPosts = posts.filter(post => 
+    post.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
+    <Container className="my-4 bg-light">
+      {/* Barre de recherche */}
+      <Row className="justify-content-center mb-4">
+        <Col xs={12} md={6}>
+          <Form.Control 
+            type="text" 
+            placeholder="Search..." 
+            value={search} 
+            onChange={(e) => setSearch(e.target.value)} 
+          />
+        </Col>
+      </Row>
 
-                <div className="!z-5 relative flex h-full w-full flex-col rounded-[20px] bg-white bg-clip-border p-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:shadow-none">
-                    
-                        <h1 className="text-xl font-bold text-navy-700 dark:text-white">Recent Posts</h1>
+      {/* Titre */}
+      <Row>
+        <Col>
+          <h5 className="text-left font-weight-bold mb-6">Recent Posts</h5>
+        </Col>
+      </Row>
 
-                    
-                    <div className="flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                        <div className="flex items-center">
-                        <div className="">
-                            <img
-                            className="h-[83px] w-[83px]"
-                            src={Img1}
-                            alt=""
-                            />
-                        </div>
-                        <div className="ml-4">
-                            <p className="text-base font-medium text-navy-700 dark:text-white">
-                            Technology behind the Blockchain
-                            </p>
-                            <p className="mt-2 text-sm text-gray-600">
-                            Project #1 .
-                            <a
-                                className="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                href=" ">See product details
-                            </a>
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="mt-3 flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                        <div className="flex items-center">
-                            <div className="">
-                                <img
-                                className="h-[83px] w-[83px]"
-                                src="https://github.com/horizon-ui/horizon-tailwind-react-ts-corporate/blob/main/src/assets/img/profile/image2.png?raw=true"
-                                alt=""
-                                />
-                        </div>
-                        <div className="ml-4">
-                            <p className="text-base font-medium text-navy-700 dark:text-white">Technology behind the Blockchain</p>
-                            <p className="mt-2 text-sm text-gray-600">
-                            Project #1 .
-                            <a className="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                href=" "> See product details</a>
-                            </p>
-                        </div>
-                        </div>
-                 
-                    </div>
-                    <div className="mt-3 flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                        <div className="flex items-center">
-                        <div className="">
-                            <img
-                            className="h-[83px] w-[83px]"
-                            src="https://github.com/horizon-ui/horizon-tailwind-react-ts-corporate/blob/main/src/assets/img/profile/image3.png?raw=true"
-                            alt=""
-                            />
-                        </div>
-                        <div className="ml-4">
-                            <p className="text-base font-medium text-navy-700 dark:text-white">
-                            Technology behind the Blockchain
-                            </p>
-                            <p className="mt-2 text-sm text-gray-600">
-                            Project #1 .
-                            <a
-                                className="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                href=" "
-                            >
-                                See product details
-                            </a>
-                            </p>
-                        </div>
-                        </div>
-                    </div>
+      {/* Liste des posts */}
+      <Row>
+        {filteredPosts.map(post => (
+          <Col key={post.id} xs={12} className="mb-3">
+            <Card className="border-0 shadow-sm">
+              <Card.Body className="d-flex align-items-center">
+                <img 
+                  src={post.image} 
+                  alt={post.title} 
+                  className="me-3 rounded" 
+                  style={{ width: '150px', height: '150px' }} 
+                />
+                <div className="float-right">
+                  <Card.Title className="text-danger mb-1" style={{ fontSize: '20px' }}>
+                    {post.title}
+                  </Card.Title>
+                  <Card.Subtitle className="text-muted" style={{ fontSize: '18px' }}>
+                    {post.category}
+                  </Card.Subtitle>
                 </div>
-  
-  )
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
 }
+
+export default RecentPosts;

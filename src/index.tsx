@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ImageList from './Components/ImageList';
-import Posts from './Components/Posts';
+import Kitchen from './Components/Kitchen/Kitchen';
+import Acceuil from './Components/Acceuil/Acceuil';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <ImageList/>
-    <Posts/>
+    <Acceuil/>
+    <Kitchen/>
   </React.StrictMode>
 );
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Form } from 'react-bootstrap';
 
-function Posts() {
+function RecentPosts() {
   const [search, setSearch] = useState("");
 
   const posts = [
@@ -66,20 +66,20 @@ function Posts() {
       {/* Liste des posts */}
       <Row>
         {filteredPosts.map(post => (
-          <Col key={post.id} xs={12} className="mb-3">
+          <Col key={post.id} xs={12} className="mb-2">
             <Card className="border-0 shadow-sm">
               <Card.Body className="d-flex align-items-center">
                 <img 
                   src={post.image} 
                   alt={post.title} 
                   className="me-3 rounded" 
-                  style={{ width: '150px', height: '150px' }} 
+                  style={{ width: '120px', height: '120px' }} 
                 />
                 <div className="float-right">
-                  <Card.Title className="text-danger mb-1" style={{ fontSize: '20px' }}>
+                  <Card.Title className="text-danger mb-1 text-red-500" style={{ fontSize: '15px' }}>
                     {post.title}
                   </Card.Title>
-                  <Card.Subtitle className="text-muted" style={{ fontSize: '18px' }}>
+                  <Card.Subtitle className="text-muted text-red-500" style={{ fontSize: '12px' }}>
                     {post.category}
                   </Card.Subtitle>
                 </div>
@@ -92,4 +92,4 @@ function Posts() {
   );
 }
 
-export default Posts;
+export default RecentPosts;

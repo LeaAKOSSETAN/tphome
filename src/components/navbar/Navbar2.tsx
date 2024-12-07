@@ -16,9 +16,9 @@ export const Navbar2 = () => {
         </a>
       </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            <a href="#" className="text-sm/6 font-semibold  text-white">About Us</a>
+            <a href="" className="text-sm/6 font-semibold  text-white">About Us</a>
             <a href="#" className="text-sm/6 font-semibold  text-white">Living Room</a>
-            <a href="#" className="text-sm/6 font-semibold text-white">Kitchen</a>
+            <a href= {<Kitchen/>} className="text-sm/6 font-semibold text-white">Kitchen</a>
             <a href="#" className="text-sm/6 font-semibold text-white">Outdoors</a>
             <a href="#" className="text-sm/6 font-semibold text-white">Contact</a>
           </div>

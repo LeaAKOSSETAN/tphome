@@ -16,42 +16,43 @@ function FirstImage(props:{titre: string; lien: string; url: string; description
 
     const styles = {
         imageItem: {
-          width: '3000px', 
-          marginBottom: '70px',
-          padding: '60px',   
-          transition: 'transform 0.3s ease',  
+          width: '800px', 
+          marginBottom: '18px',
+          padding: '10px',   
+          transition: 'transform 0.3s ease',
+          marginTop: '40px'  
         },
     
         lien:{
-            fontSize: '40px',
-            marginBottom: '200px',
+            fontSize: '10px',
+            marginBottom: '20px',
             color: 'red',
             textDecoration: 'underline',
         },
         title: {
-          fontSize: '100px',
+          fontSize: '25px',
           marginBottom: '10px',
           fontWeight: 'bold',
           color: '#333',
         },
         image: {
-          width: '2800px',
-          height: '1400px',
+          width: '800px',
+          height: '400px',
           marginBottom: '10px',
-          marginTop:'30px',
+          marginTop:'20px',
         },
         description: {
-          fontSize: '65px',
+          fontSize: '20px',
           color: '#555',
           lineHeight: '1.5',
-          marginBottom: '50px',
+          marginBottom: '10px',
         },
         readMore: {
           display: 'inline-block',
-          marginTop: '70px',
+          marginTop: '10px',
           color: 'red',
           textDecoration: 'none',
-          fontSize: '65px',
+          fontSize: '15px',
         },
         readMoreHover: {
           color: '#0056b3',

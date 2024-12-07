@@ -24,12 +24,12 @@
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 4px;
-    color: #c2185b;
+    color: red;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
   }
   
   .tag:hover {
-    background-color: #c2185b;
+    background-color: red;
     color: white;
   }

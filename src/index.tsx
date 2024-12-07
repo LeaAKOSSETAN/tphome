@@ -3,14 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ImageList from './Components/ImageList';
+import { Navbar, Pagination } from 'react-bootstrap';
+import Navbar2 from './Components/navbar/Navbar2';
+import Footer from './Components/Acceuil/Footer';
+import Kitchen from './Components/Kitchen/Kitchen';
+import Body from './Components/Acceuil/body';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <ImageList/>
+    <Navbar2/>
+    <Body/>
+    <Pagination/>
+    <Footer/>
+    <Kitchen/>
   </React.StrictMode>
 );
 

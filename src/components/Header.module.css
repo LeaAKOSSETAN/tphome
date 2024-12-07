@@ -1,0 +1,54 @@
+.header {
+    background-image: url('/src/components/imag.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* L'image remplit tout le conteneur */
+    background-position: center top; /* Position de l'image en haut du conteneur */
+    height: 600px; /* Hauteur fixe pour le conteneur */
+    width: 100%; /* S'étend sur toute la largeur de l'écran */
+    color: white;
+    display: flex;
+    flex-direction: column; /* Organise les enfants en colonne */
+    justify-content: flex-start; /* Place les enfants en haut */
+    align-items: center; /* Centre les éléments horizontalement */
+    padding-top: 50px; /* Ajoute de l'espace en haut, ajuste selon vos besoins */
+}
+
+.textContainer {
+    position: absolute;
+    top: 40%; /* Modifiez cette valeur pour pousser le texte vers le haut ou le bas */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrage du texte */
+    text-align: center;
+}
+
+.largeText {
+    font-size: 4.5rem; /* Augmente légèrement la taille pour "Living Room" */
+    font-weight: bold;
+}
+
+.smallText {
+    font-size: 1.5rem; /* Taille plus grande pour "Moi" */
+    font-weight: normal;
+    margin-top: 15px; /* Espace entre les deux textes */
+}
+
+/* Nouveau style pour "INTERIOR DESIGN" */
+.interiorDesign {
+    font-size: 1.1rem; /* Augmente un peu la taille */
+    font-weight: 300; /* Texte léger */
+    margin-top: 10px; /* Espace entre le titre et ce texte */
+    color: rgba(255, 255, 255, 0.8); /* Couleur blanche avec une légère transparence */
+    letter-spacing: 1.8px; /* Espacement entre les lettres pour un effet stylé */
+}
+
+/* Styles pour les liens du menu */
+nav ul li a {
+    text-decoration: none; /* Enlève le soulignement des liens */
+    font-size: 1.2rem; /* Augmente légèrement la taille des textes */
+    color: white; /* Couleur des liens */
+    font-weight: 500; /* Poids légèrement plus gras pour rendre le texte plus visible */
+    transition: color 0.3s; /* Ajoute une animation lors du survol */
+}
+
+nav ul li a:hover {
+    color: rgba(255, 255, 255, 0.7); /* Légère transparence au survol */
+}
